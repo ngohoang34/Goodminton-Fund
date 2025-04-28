@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
             hienThiTongQuan(data.tong_ket);
             hienThiDanhSachGiaoDich(data.thu, 'du-lieu-thu');
             hienThiDanhSachGiaoDich(data.chi, 'du-lieu-chi');
-            taoBieuDoThuChi(data.tong_ket);
+            taoBieuDoTronThuChi(data.tong_ket);
         })
         .catch(error => {
             console.error('Lỗi khi tải dữ liệu:', error);
@@ -41,41 +41,34 @@ function hienThiDanhSachGiaoDich(danhSach, elementId) {
     container.innerHTML = html;
 }
 
-function taoBieuDoThuChi(tongKet) {
+function taoBieuDoTronThuChi(tongKet) {
     const ctx = document.getElementById('bieu-do-thu-chi').getContext('2d');
     const myChart = new Chart(ctx, {
-        type: 'bar',
+        type: 'pie',
         data: {
-            labels: ['Tổng Thu', 'Tổng Chi', 'Số Dư'],
+            labels: ['Tổng Thu', 'Tổng Chi'],
             datasets: [{
                 label: 'VNĐ',
-                data: [tongKet.tong_thu, tongKet.tong_chi, tongKet.so_du],
+                data: [tongKet.tong_thu, tongKet.tong_chi],
                 backgroundColor: [
                     'rgba(75, 192, 192, 0.7)',
-                    'rgba(255, 99, 132, 0.7)',
-                    'rgba(255, 206, 86, 0.7)',
+                    'rgba(255, 99, 132, 0.7)'
                 ],
                 borderColor: [
                     'rgba(75, 192, 192, 1)',
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(255, 206, 86, 1)',
+                    'rgba(255, 99, 132, 1)'
                 ],
                 borderWidth: 1
             }]
         },
         options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            },
             plugins: {
                 legend: {
-                    display: false
+                    position: 'bottom'
                 },
                 title: {
                     display: true,
-                    text: 'Thống Kê Tổng Thu, Tổng Chi và Số Dư',
+                    text: 'Tỷ Lệ Tổng Thu và Tổng Chi',
                     font: {
                         size: 16
                     }
