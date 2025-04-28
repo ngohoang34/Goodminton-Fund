@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Quản Lý Thu Chi Quỹ</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Dashboard Quản Lý Thu Chi Quỹ</h1>
+    </header>
+    <main class="dashboard">
+        <section id="tong-quan">
+            <h2>Tổng Quan</h2>
+            <div class="overview-cards">
+                <div class="card">
+                    <h3>Tổng Thu</h3>
+                    <p class="amount" id="tong-thu-overview"></p>
+                </div>
+                <div class="card">
+                    <h3>Tổng Chi</h3>
+                    <p class="amount negative" id="tong-chi-overview"></p>
+                </div>
+                <div class="card">
+                    <h3>Số Dư</h3>
+                    <p class="amount" id="so-du-overview"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="thong-ke-thu-chi">
+            <h2>Thống Kê Thu Chi</h2>
+            <div class="chart-container">
+                <canvas id="bieu-do-thu-chi"></canvas>
+            </div>
+        </section>
+
+        <section id="danh-sach-giao-dich">
+            <h2>Giao Dịch Gần Đây</h2>
+            <div id="danh-sach-thu">
+                <h3>Khoản Thu Gần Đây</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ngày</th>
+                            <th>Người Nộp</th>
+                            <th>Số Tiền (VND)</th>
+                            <th>Ghi Chú</th>
+                        </tr>
+                    </thead>
+                    <tbody id="du-lieu-thu"></tbody>
+                </table>
+            </div>
+            <div id="danh-sach-chi">
+                <h3>Khoản Chi Gần Đây</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ngày</th>
+                            <th>Nội Dung Chi</th>
+                            <th>Số Tiền (VND)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="du-lieu-chi"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Dashboard Quản Lý Thu Chi Quỹ</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+{
+    "thu": [
+        {
+            "ngay": "17/04/2025",
+            "nguoi_nop": "Khanh",
+            "so_tien": 200000
+        },
+        {
+            "ngay": "17/04/2025",
+            "nguoi_nop": "Thanh",
+            "so_tien": 200000
+        },
+        {
+            "ngay": "17/04/2025",
+            "nguoi_nop": "HA",
+            "so_tien": 400000,
+            "ghi_chu": "Đóng quỹ 2 tháng"
+        },
+        {
+            "ngay": "17/04/2025",
+            "nguoi_nop": "Hiếu + Ánh",
+            "so_tien": 400000
+        },
+        {
+            "ngay": "17/04/2025",
+            "nguoi_nop": "Nhật Đức",
+            "so_tien": 200000
+        },
+        {
+            "ngay": "17/04/2025",
+            "nguoi_nop": "Hoàng + Huệ",
+            "so_tien": 400000
+        },
+        {
+            "ngay": "17/04/2025",
+            "nguoi_nop": "Thanh",
+            "so_tien": 40000
+        }
+    ],
+    "chi": [
+        {
+            "ngay": "20/04/2025",
+            "noi_dung": "Sân x2: 9-11h",
+            "so_tien": 400000
+        },
+        {
+            "ngay": "20/04/2025",
+            "noi_dung": "Hộp cầu",
+            "so_tien": 270000
+        },
+        {
+            "ngay": "27/04/2025",
+            "noi_dung": "Sân x2: 9-11h",
+            "so_tien": 300000
+        },
+        {
+            "ngay": "27/04/2025",
+            "noi_dung": "Nước",
+            "so_tien": 167000
+        }
+    ],
+    "tong_ket": {
+        "tong_thu": 1840000,
+        "tong_chi": 1137000,
+        "so_du": 703000
+    }
+}
