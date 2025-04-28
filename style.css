@@ -128,14 +128,16 @@ header {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    overflow-x: auto;
+    /* Cho phép cuộn ngang trên các màn hình nhỏ */
 }
 
 .dashboard th,
 .dashboard td {
     border-bottom: 1px solid #eee;
-    padding: 15px;
+    padding: 12px 8px;
     text-align: left;
-    font-size: 1.1em;
+    font-size: 1em;
 }
 
 .dashboard th {
@@ -160,39 +162,40 @@ footer {
     border-radius: 12px;
 }
 
-@media (min-width: 768px) {
-    header {
-        text-align: left;
-        padding: 2em 40px;
+@media (max-width: 768px) {
+
+    /* Khi màn hình nhỏ */
+    .dashboard table {
+        display: block;
+        /* Biến bảng thành block để có thể cuộn ngang */
+        overflow-x: auto;
+        /* Cho phép cuộn ngang */
+        -webkit-overflow-scrolling: touch;
+        /* Thêm cuộn mượt mà trên thiết bị iOS */
+    }
+
+    .dashboard th,
+    .dashboard td {
+        font-size: 0.9em;
+        /* Giảm kích thước chữ cho các màn hình nhỏ */
+        padding: 10px 5px;
+        /* Giảm padding để bảng không quá rộng */
     }
 
     .dashboard main {
-        padding: 40px;
+        padding: 20px;
     }
 
     .overview-cards {
-        flex-direction: row;
-        gap: 30px;
+        flex-direction: column;
     }
 
     .overview-cards .card {
-        text-align: left;
-        border-left: 5px solid #3498db;
-        border-top: none;
-        padding: 30px;
-    }
-
-    #danh-sach-giao-dich {
-        display: flex;
-        gap: 20px;
-    }
-
-    #danh-sach-thu,
-    #danh-sach-chi {
-        flex: 1;
+        padding: 20px;
+        text-align: center;
     }
 
     footer {
-        padding: 2em 40px;
+        padding: 1.5em 20px;
     }
 }
