@@ -7,7 +7,7 @@
         },
         {
             "ngay": "17/04/2025",
-            "nguoi_nop": "Thanh",
+            "nguoi_nop": "Thành",
             "so_tien": 200000
         },
         {
@@ -33,8 +33,9 @@
         },
         {
             "ngay": "17/04/2025",
-            "nguoi_nop": "Thanh",
-            "so_tien": 40000
+            "nguoi_nop": "Thành",
+            "so_tien": 40000,
+            "ghi_chu": "Đóng góp từ tiền Poker"
         }
     ],
     "chi": [
