@@ -2,7 +2,7 @@
     "thu": [
         {
             "ngay": "17/04/2025",
-            "nguoi_nop": "Khanh",
+            "nguoi_nop": "Phanh",
             "so_tien": 200000
         },
         {
@@ -59,9 +59,4 @@
             "so_tien": 167000
         }
     ],
-    "tong_ket": {
-        "tong_thu": 1840000,
-        "tong_chi": 1137000,
-        "so_du": 703000
-    }
 }

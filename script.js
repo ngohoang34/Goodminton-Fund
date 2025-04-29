@@ -2,16 +2,33 @@ document.addEventListener('DOMContentLoaded', function () {
     fetch('data.json')
         .then(response => response.json())
         .then(data => {
-            hienThiTongQuan(data.tong_ket);
+            const tongKet = tinhTongKet(data.thu, data.chi);
+            hienThiTongQuan(tongKet);
             hienThiDanhSachGiaoDich(data.thu, 'du-lieu-thu');
             hienThiDanhSachGiaoDich(data.chi, 'du-lieu-chi');
-            taoBieuDoTronThuChi(data.tong_ket);
+            taoBieuDoTronThuChi(tongKet);
         })
         .catch(error => {
             console.error('Lỗi khi tải dữ liệu:', error);
             document.getElementById('main').innerHTML = '<p class="error">Không thể tải dữ liệu. Vui lòng thử lại sau.</p>';
         });
 });
+
+function tinhTongKet(thu, chi) {
+    let tongThu = 0;
+    thu.forEach(item => {
+        tongThu += item.so_tien;
+    });
+
+    let tongChi = 0;
+    chi.forEach(item => {
+        tongChi += item.so_tien;
+    });
+
+    const soDu = tongThu - tongChi;
+
+    return { tong_thu: tongThu, tong_chi: tongChi, so_du: soDu };
+}
 
 function hienThiTongQuan(tongKet) {
     document.getElementById('tong-thu-overview').textContent = formatCurrency(tongKet.tong_thu);
@@ -46,7 +63,7 @@ function taoBieuDoTronThuChi(tongKet) {
     const myChart = new Chart(ctx, {
         type: 'pie',
         data: {
-            labels: ['Tổng Thu', 'Tổng Chi'],
+            labels: ['Tổng thu', 'Tổng chi'],
             datasets: [{
                 label: 'VNĐ',
                 data: [tongKet.tong_thu, tongKet.tong_chi],
@@ -68,7 +85,7 @@ function taoBieuDoTronThuChi(tongKet) {
                 },
                 title: {
                     display: true,
-                    text: 'Tỷ Lệ Tổng Thu và Tổng Chi',
+                    text: 'Tỷ lệ Tổng thu và Tổng chi',
                     font: {
                         size: 16
                     }

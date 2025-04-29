@@ -1,4 +1,3 @@
-/* Đảm bảo tất cả các phần tử sẽ tính chiều rộng/bề cao chính xác hơn */
 *,
 *::before,
 *::after {
@@ -9,27 +8,22 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     background-color: #f7f7f7;
-    /* Màu nền sáng dịu nhẹ */
     background: linear-gradient(135deg, #f7f7f7, #e0e0e7);
     color: #333;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     padding: 20px;
-    /* Thêm padding xung quanh màn hình */
 }
 
 header {
     background-color: #ffffff;
     color: #333;
     padding: 2em 30px;
-    /* Tăng padding để không bị sát cạnh */
     text-align: center;
     margin-bottom: 40px;
     border-radius: 12px;
-    /* Tạo bo góc cho header */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    /* Thêm bóng mờ */
 }
 
 .dashboard main {
@@ -37,7 +31,6 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     background-color: #ffffff;
-    /* Nền trắng cho các section */
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
@@ -66,14 +59,12 @@ header {
     text-align: center;
     border-left: none;
     border-top: 5px solid #3498db;
-    /* Màu sắc nhẹ nhàng cho đường viền */
     transition: transform 0.3s ease-in-out;
 }
 
 .overview-cards .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    /* Bóng mờ đậm hơn khi hover */
 }
 
 .overview-cards .card h3 {
@@ -129,7 +120,6 @@ header {
     border-collapse: collapse;
     margin-top: 20px;
     overflow-x: auto;
-    /* Cho phép cuộn ngang trên các màn hình nhỏ */
 }
 
 .dashboard th,
@@ -164,22 +154,16 @@ footer {
 
 @media (max-width: 768px) {
 
-    /* Khi màn hình nhỏ */
     .dashboard table {
         display: block;
-        /* Biến bảng thành block để có thể cuộn ngang */
         overflow-x: auto;
-        /* Cho phép cuộn ngang */
         -webkit-overflow-scrolling: touch;
-        /* Thêm cuộn mượt mà trên thiết bị iOS */
     }
 
     .dashboard th,
     .dashboard td {
         font-size: 0.9em;
-        /* Giảm kích thước chữ cho các màn hình nhỏ */
         padding: 10px 5px;
-        /* Giảm padding để bảng không quá rộng */
     }
 
     .dashboard main {
