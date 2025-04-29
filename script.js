@@ -42,7 +42,7 @@ function hienThiTongQuan(tongKet) {
 function hienThiDanhSachGiaoDich(danhSach, elementId) {
     const container = document.getElementById(elementId);
     let html = '';
-    const soLuongHienThi = 5;
+    const soLuongHienThi = 15;
     const danhSachGanDay = danhSach.slice(-soLuongHienThi).reverse();
 
     danhSachGanDay.forEach(item => {
